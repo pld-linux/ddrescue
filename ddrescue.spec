@@ -2,8 +2,8 @@ Summary:	Data copying in presence of I/O errors
 Summary(pl):	Kopiowanie danych z b³êdami wej¶cia/wyj¶cia
 Name:		ddrescue
 Version:	0.9
-Release:	1
-License:	GPL
+Release:	2
+License:	GPL v2
 Group:		Applications/System
 Source0:	http://savannah.nongnu.org/download/ddrescue/%{name}-%{version}.tar.bz2
 # Source0-md5:	f98e339818f2a81e28574baa5c8657a1
@@ -29,7 +29,6 @@ different input files is very low.
 If you also use the bad blocks file feature of ddrescue, the data will
 be rescued very efficiently. Also you can interrupt the rescue at any
 time and resume it later.
-
 
 %description -l pl
 ddrescue kopiuje dane z jednego pliku lub urz±dzenia blokowego (dysku
