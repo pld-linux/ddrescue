@@ -10,6 +10,7 @@ Source0:	http://savannah.nongnu.org/download/ddrescue/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-Makefile.patch
 URL:		http://www.nongnu.org/ddrescue/ddrescue.html
 BuildRequires:	libstdc++-devel
+BuildRequires:	rpmbuild(macros) >= 1.167
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
