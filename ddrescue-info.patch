@@ -1,0 +1,14 @@
+--- ddrescue-0.9/doc/ddrescue.info.orig	2004-12-30 12:38:11.000000000 +0100
++++ ddrescue-0.9/doc/ddrescue.info	2005-01-07 23:47:27.983032872 +0100
+@@ -1,9 +1,9 @@
+ This is ddrescue.info, produced by makeinfo version 4.2 from
+ ddrescue.texinfo.
+ 
+-INFO-DIR-SECTION GNU Packages
++INFO-DIR-SECTION File utilities:
+ START-INFO-DIR-ENTRY
+-* ddrescue: (ddrescue).          Data recovery tool.
++* ddrescue: (ddrescue).			Data recovery tool
+ END-INFO-DIR-ENTRY
+ 
+ 
