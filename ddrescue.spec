@@ -9,6 +9,7 @@ Source0:	http://savannah.nongnu.org/download/ddrescue/%{name}-%{version}.tar.bz2
 # Source0-md5:	f98e339818f2a81e28574baa5c8657a1
 Patch0:		%{name}-Makefile.patch
 URL:		http://www.nongnu.org/ddrescue/ddrescue.html
+BuildRequires:	libstdc++-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
