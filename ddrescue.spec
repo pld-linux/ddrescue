@@ -57,8 +57,8 @@ bêd± odzyskiwane bardzo wydajnie.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -D ddrescue   $RPM_BUILD_ROOT%{_bindir}/ddrescue
-install -D ddrescue.1 $RPM_BUILD_ROOT%{_mandir}/man1/ddrescue.1
+install -D ddrescue	$RPM_BUILD_ROOT%{_bindir}/ddrescue
+install -D ddrescue.1	$RPM_BUILD_ROOT%{_mandir}/man1/ddrescue.1
 
 %clean
 rm -rf $RPM_BUILD_ROOT
