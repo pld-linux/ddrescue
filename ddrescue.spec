@@ -7,6 +7,7 @@ License:	GPL
 Group:		Applications/System
 Source0:	http://savannah.nongnu.org/download/ddrescue/%{name}-%{version}.tar.bz2
 # Source0-md5:	f98e339818f2a81e28574baa5c8657a1
+Patch0:		%{name}-Makefile.patch
 URL:		http://www.nongnu.org/ddrescue/ddrescue.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -49,23 +50,36 @@ bêd± odzyskiwane bardzo wydajnie.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
-./configure
+./configure \
+	--prefix=%{_prefix} \
+	--infodir=%{_infodir} \
+	--mandir=%{_mandir}
+
 %{__make} \
 	CXX="%{__cxx}" \
-	CXXFLAGS="%{rpmcflags}"
+	CXXFLAGS="%{rpmcxxflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -D ddrescue	$RPM_BUILD_ROOT%{_bindir}/ddrescue
-install -D doc/ddrescue.1	$RPM_BUILD_ROOT%{_mandir}/man1/ddrescue.1
+
+%{__make} install install-man \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post
+[ ! -x /usr/sbin/fix-info-dir ] || /usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
+
+%postun
+[ ! -x /usr/sbin/fix-info-dir ] || /usr/sbin/fix-info-dir -c %{_infodir} >/dev/null 2>&1
+
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README TODO doc/ddrescue.info
+%doc AUTHORS ChangeLog NEWS README TODO
 %attr(755,root,root) %{_bindir}/ddrescue
+%{_infodir}/*
 %{_mandir}/man1/*
