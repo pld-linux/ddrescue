@@ -1,11 +1,11 @@
 Summary:	Data copying in presence of I/O errors
-Summary(pl):	Kopiowanie danych z b³êdami we/wy
+Summary(pl):	Kopiowanie danych z b³êdami wej¶cia/wyj¶cia
 Name:		ddrescue
 Version:	0.7
 Release:	1
 License:	GPL
 Group:		Applications/System
-Source0:	http://savannah.nongnu.org/download/%{name}/%{name}-%{version}.tar.bz2
+Source0:	http://savannah.nongnu.org/download/ddrescue/%{name}-%{version}.tar.bz2
 # Source0-md5:	1178c44372a08c906cc5bb1141ae7baf
 URL:		http://www.nongnu.org/ddrescue/ddrescue.html
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -24,17 +24,28 @@ will probably obtain a complete and error-free file. This is so
 because the probability of having damaged areas at the same places on
 different input files is very low.
 
-if you also use the bad blocks file feature of ddrescue, the data will
-be rescued very efficiently. ddrescue helps, when nobody else will:
-Your disk has crashed and you try to copy it over to another one.
-Standard Un*x tools like cp, cat, dd will abort on every I/O error.
-dd_rescue won't.
+If you also use the bad blocks file feature of ddrescue, the data will
+be rescued very efficiently. Also you can interrupt the rescue at any
+time and resume it later.
+
 
 %description -l pl
-ddrescue pomaga tam, gdzie nic innego nie pomo¿e: kiedy dysk padnie i
-próbujemy go skopiowaæ na inny. Standardowe narzêdzia uniksowe takie
-jak cp, cat, dd koñcz± dzia³anie na ka¿dym b³êdzie we/wy. dd_rescue
-tego nie robi.
+ddrescue kopiuje dane z jednego pliku lub urz±dzenia blokowego (dysku
+twardego, p³yty CD-ROM itp.) do innego, próbuj±c usilnie uratowaæ dane
+w przypadku b³êdów odczytu.
+
+ddrescue nie skraca pliku wyj¶ciowego, je¶li nie zostanie o to
+poproszony. Za ka¿dym uruchomieniem na tym samym pliku wyj¶ciowym
+próbuje wype³niæ luki.
+
+Je¶li mamy dwie lub wiêcej kopii uszkodzonego pliku, p³yty itp. i
+uruchomimy ddrescue na wszystkich z nich z tym samym plikiem
+wyj¶ciowym, prawdopodobnie dostaniemy ca³y plik bez b³êdów. Stanie siê
+tak dlatego, ¿e prawdopodobieñstwo uszkodzenia pliku w tych samych
+miejscach na ró¿nych kopiach jest bardzo ma³e.
+
+Je¶li u¿yjemy opcji obs³ugi pliku z list± z³ych bloków w ddrescue dane
+bêd± odzyskiwane bardzo wydajnie.
 
 %prep
 %setup -q
@@ -56,4 +67,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog README
 %attr(755,root,root) %{_bindir}/ddrescue
-%attr(644,root,root) %{_mandir}/man1/*
+%{_mandir}/man1/*
