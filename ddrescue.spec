@@ -2,12 +2,13 @@ Summary:	Data copying in presence of I/O errors
 Summary(pl):	Kopiowanie danych z b³êdami wej¶cia/wyj¶cia
 Name:		ddrescue
 Version:	0.9
-Release:	2
+Release:	3
 License:	GPL v2
 Group:		Applications/System
 Source0:	http://savannah.nongnu.org/download/ddrescue/%{name}-%{version}.tar.bz2
 # Source0-md5:	f98e339818f2a81e28574baa5c8657a1
 Patch0:		%{name}-Makefile.patch
+Patch1:		%{name}-info.patch
 URL:		http://www.nongnu.org/ddrescue/ddrescue.html
 BuildRequires:	libstdc++-devel
 BuildRequires:	rpmbuild(macros) >= 1.167
@@ -52,6 +53,7 @@ bêd± odzyskiwane bardzo wydajnie.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 ./configure \
@@ -82,5 +84,5 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README TODO
 %attr(755,root,root) %{_bindir}/ddrescue
-%{_infodir}/*
+%{_infodir}/*.info*
 %{_mandir}/man1/*
