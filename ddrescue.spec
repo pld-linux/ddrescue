@@ -82,7 +82,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README TODO
+%doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/ddrescue
 %{_infodir}/*.info*
 %{_mandir}/man1/*
