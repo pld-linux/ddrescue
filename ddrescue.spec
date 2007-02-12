@@ -1,5 +1,5 @@
 Summary:	Data copying in presence of I/O errors
-Summary(pl.UTF-8):   Kopiowanie danych z błędami wejścia/wyjścia
+Summary(pl.UTF-8):	Kopiowanie danych z błędami wejścia/wyjścia
 Name:		ddrescue
 Version:	1.3
 Release:	2
