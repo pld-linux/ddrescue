@@ -1,5 +1,5 @@
 Summary:	Data copying in presence of I/O errors
-Summary(pl):	Kopiowanie danych z b³êdami wej¶cia/wyj¶cia
+Summary(pl.UTF-8):   Kopiowanie danych z bÅ‚Ä™dami wejÅ›cia/wyjÅ›cia
 Name:		ddrescue
 Version:	1.3
 Release:	2
@@ -32,23 +32,23 @@ If you also use the bad blocks file feature of ddrescue, the data will
 be rescued very efficiently. Also you can interrupt the rescue at any
 time and resume it later.
 
-%description -l pl
-ddrescue kopiuje dane z jednego pliku lub urz±dzenia blokowego (dysku
-twardego, p³yty CD-ROM itp.) do innego, próbuj±c usilnie uratowaæ dane
-w przypadku b³êdów odczytu.
+%description -l pl.UTF-8
+ddrescue kopiuje dane z jednego pliku lub urzÄ…dzenia blokowego (dysku
+twardego, pÅ‚yty CD-ROM itp.) do innego, prÃ³bujÄ…c usilnie uratowaÄ‡ dane
+w przypadku bÅ‚Ä™dÃ³w odczytu.
 
-ddrescue nie skraca pliku wyj¶ciowego, je¶li nie zostanie o to
-poproszony. Za ka¿dym uruchomieniem na tym samym pliku wyj¶ciowym
-próbuje wype³niæ luki.
+ddrescue nie skraca pliku wyjÅ›ciowego, jeÅ›li nie zostanie o to
+poproszony. Za kaÅ¼dym uruchomieniem na tym samym pliku wyjÅ›ciowym
+prÃ³buje wypeÅ‚niÄ‡ luki.
 
-Je¶li mamy dwie lub wiêcej kopii uszkodzonego pliku, p³yty itp. i
+JeÅ›li mamy dwie lub wiÄ™cej kopii uszkodzonego pliku, pÅ‚yty itp. i
 uruchomimy ddrescue na wszystkich z nich z tym samym plikiem
-wyj¶ciowym, prawdopodobnie dostaniemy ca³y plik bez b³êdów. Stanie siê
-tak dlatego, ¿e prawdopodobieñstwo uszkodzenia pliku w tych samych
-miejscach na ró¿nych kopiach jest bardzo ma³e.
+wyjÅ›ciowym, prawdopodobnie dostaniemy caÅ‚y plik bez bÅ‚Ä™dÃ³w. Stanie siÄ™
+tak dlatego, Å¼e prawdopodobieÅ„stwo uszkodzenia pliku w tych samych
+miejscach na rÃ³Å¼nych kopiach jest bardzo maÅ‚e.
 
-Je¶li u¿yjemy opcji obs³ugi pliku z list± z³ych bloków w ddrescue dane
-bêd± odzyskiwane bardzo wydajnie.
+JeÅ›li uÅ¼yjemy opcji obsÅ‚ugi pliku z listÄ… zÅ‚ych blokÃ³w w ddrescue dane
+bÄ™dÄ… odzyskiwane bardzo wydajnie.
 
 %prep
 %setup -q
