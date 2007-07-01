@@ -1,14 +1,13 @@
-diff -ur ddrescue-1.1/doc/ddrescue.info ddrescue-1.1.new/doc/ddrescue.info
---- ddrescue-1.1/doc/ddrescue.info	2005-10-10 18:03:18.000000000 +0000
-+++ ddrescue-1.1.new/doc/ddrescue.info	2005-10-13 07:32:02.708178824 +0000
+--- ddrescue-1.5/doc/ddrescue.info.orig	2007-06-28 22:09:48.000000000 +0000
++++ ddrescue-1.5/doc/ddrescue.info	2007-07-01 13:35:28.533868515 +0000
 @@ -1,9 +1,9 @@
- This is ddrescue.info, produced by makeinfo version 4.2 from
+ This is ddrescue.info, produced by makeinfo version 4.8 from
  ddrescue.texinfo.
  
 -INFO-DIR-SECTION GNU Packages
 +INFO-DIR-SECTION File utilities:
  START-INFO-DIR-ENTRY
--* ddrescue: (ddrescue).        Data recovery tool.
+-* ddrescue: (ddrescue).         Data recovery tool.
 +* ddrescue: (ddrescue).			Data recovery tool
  END-INFO-DIR-ENTRY
  

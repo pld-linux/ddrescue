@@ -70,7 +70,7 @@ diff -u ../ddrescue-1.2/ddrescue.cc ./ddrescue.cc
 +          switch( sb.status() )
 +            {
 +            case Sblock::non_tried  : non_tried+= size; break;
-+            case Sblock::bad_cluster:
++            case Sblock::non_split  :
 +            case Sblock::bad_block  : bad      += size; break;
 +            case Sblock::done       : ok       += size; break;
 +            }
