@@ -8,7 +8,8 @@ Group:		Applications/System
 Source0:	http://savannah.nongnu.org/download/ddrescue/%{name}-%{version}.tar.bz2
 # Source0-md5:	91931e2b2163c8d7a5adc1959da3023f
 Patch0:		%{name}-info.patch
-Patch1:		http://guru.multimedia.cx/wp-content/uploads/2006/08/ddrescue-patch.txt
+# updated from http://guru.multimedia.cx/wp-content/uploads/2006/08/ddrescue-patch.txt
+Patch1:		ddrescue-patch.txt
 URL:		http://www.nongnu.org/ddrescue/ddrescue.html
 BuildRequires:	libstdc++-devel
 BuildRequires:	rpmbuild(macros) >= 1.167
