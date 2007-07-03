@@ -1,6 +1,3 @@
-Only in .: arg_parser.o
-Only in .: block.o
-Only in .: ddrescue
 diff -u ../ddrescue-1.2/ddrescue.cc ./ddrescue.cc
 --- ../ddrescue-1.2/ddrescue.cc	2006-03-16 19:14:05.000000000 +0100
 +++ ./ddrescue.cc	2006-08-14 16:48:54.000000000 +0200
@@ -103,7 +100,6 @@ diff -u ../ddrescue-1.2/ddrescue.cc ./ddrescue.cc
      }
 +    first=0;
    }
-Only in .: ddrescue.cc~
 diff -u ../ddrescue-1.2/ddrescue.h ./ddrescue.h
 --- ../ddrescue-1.2/ddrescue.h	2006-03-29 18:29:46.000000000 +0200
 +++ ./ddrescue.h	2006-08-06 09:18:41.000000000 +0200
@@ -128,9 +124,6 @@ diff -u ../ddrescue-1.2/ddrescue.h ./ddrescue.h
  
  
  // Defined in main.cc
-Only in .: ddrescue.h~
-Only in .: ddrescue.o
-Common subdirectories: ../ddrescue-1.2/doc and ./doc
 diff -u ../ddrescue-1.2/logbook.cc ./logbook.cc
 --- ../ddrescue-1.2/logbook.cc	2006-04-03 12:52:39.000000000 +0200
 +++ ./logbook.cc	2006-08-06 09:16:37.000000000 +0200
@@ -176,8 +169,6 @@ diff -u ../ddrescue-1.2/logbook.cc ./logbook.cc
      std::fputc( '\n', stdout );
      }
    compact_sblock_vector( sblock_vector );
-Only in .: logbook.cc~
-Only in .: logbook.o
 diff -u ../ddrescue-1.2/main.cc ./main.cc
 --- ../ddrescue-1.2/main.cc	2006-04-03 12:48:36.000000000 +0200
 +++ ./main.cc	2006-08-14 16:26:51.000000000 +0200
@@ -218,7 +209,3 @@ diff -u ../ddrescue-1.2/main.cc ./main.cc
        case 'V': show_version(); return 0;
        default : internal_error( "uncaught option" );
        }
-Only in .: main.cc~
-Only in .: main.cc.orig
-Only in .: main.o
-Only in .: Makefile
