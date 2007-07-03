@@ -3,7 +3,7 @@ Summary(pl.UTF-8):	Kopiowanie danych z błędami wejścia/wyjścia
 Name:		ddrescue
 Version:	1.5
 Release:	1
-License:	GPL v3
+License:	GPL v3+
 Group:		Applications/System
 Source0:	http://savannah.nongnu.org/download/ddrescue/%{name}-%{version}.tar.bz2
 # Source0-md5:	91931e2b2163c8d7a5adc1959da3023f
