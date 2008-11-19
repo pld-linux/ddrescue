@@ -1,18 +1,20 @@
 Summary:	Data copying in presence of I/O errors
 Summary(pl.UTF-8):	Kopiowanie danych z błędami wejścia/wyjścia
 Name:		ddrescue
-Version:	1.8
-Release:	0.1
+Version:	1.9
+Release:	1
 License:	GPL v3+
 Group:		Applications/System
-Source0:	http://savannah.nongnu.org/download/ddrescue/%{name}-%{version}.tar.bz2
-# Source0-md5:	51451893ea96a5f9943523743a6a35ae
+Source0:	http://download.savannah.gnu.org/releases/ddrescue/%{name}-%{version}.tar.lz
+# Source0-md5:	89f001b759e5c3cd3177abf65c68c434
 Patch0:		%{name}-info.patch
 # updated from http://guru.multimedia.cx/wp-content/uploads/2006/08/ddrescue-patch.txt
+# not maintained, will be dropped soon
 Patch1:		ddrescue-patch.txt
 URL:		http://www.nongnu.org/ddrescue/ddrescue.html
 BuildRequires:	libstdc++-devel
 BuildRequires:	rpmbuild(macros) >= 1.167
+BuildRequires:	lzip
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -52,9 +54,10 @@ Jeśli użyjemy opcji obsługi pliku z listą złych bloków w ddrescue dane
 będą odzyskiwane bardzo wydajnie.
 
 %prep
-%setup -q
+%setup -q -c -T
+lzip -dc %{SOURCE0} | tar xf - -C ..
 %patch0 -p1
-#%patch1 -p1
+#patch1 -p1
 
 %build
 ./configure \
@@ -75,15 +78,15 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post	-p	/sbin/postshell
+%post	-p /sbin/postshell
 -/usr/sbin/fix-info-dir -c %{_infodir}
 
-%postun	-p	/sbin/postshell
+%postun	-p /sbin/postshell
 -/usr/sbin/fix-info-dir -c %{_infodir}
 
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/ddrescue
-%{_infodir}/*.info*
-%{_mandir}/man1/*
+%{_infodir}/ddrescue.info*
+%{_mandir}/man1/ddrescue.1*
