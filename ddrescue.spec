@@ -1,17 +1,18 @@
 Summary:	Data copying in presence of I/O errors
 Summary(pl.UTF-8):	Kopiowanie danych z błędami wejścia/wyjścia
 Name:		ddrescue
-Version:	1.13
+Version:	1.14
 Release:	1
 License:	GPL v3+
 Group:		Applications/System
 Source0:	http://download.savannah.gnu.org/releases/ddrescue/%{name}-%{version}.tar.lz
-# Source0-md5:	00cd788fbd6bc5a6205c3199f7557fda
+# Source0-md5:	122d628c884a170659ac4c227cc484bc
 Patch0:		%{name}-info.patch
 URL:		http://www.nongnu.org/ddrescue/ddrescue.html
 BuildRequires:	libstdc++-devel
-BuildRequires:	rpmbuild(macros) >= 1.167
 BuildRequires:	lzip
+BuildRequires:	rpmbuild(macros) >= 1.167
+BuildRequires:	tar >= 1:1.22
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -51,8 +52,7 @@ Jeśli użyjemy opcji obsługi pliku z listą złych bloków w ddrescue dane
 będą odzyskiwane bardzo wydajnie.
 
 %prep
-%setup -q -c -T
-lzip -dc %{SOURCE0} | tar xf - -C ..
+%setup -q
 %patch0 -p1
 
 %build
