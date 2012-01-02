@@ -7,7 +7,7 @@
 -INFO-DIR-SECTION GNU Packages
 +INFO-DIR-SECTION File utilities:
  START-INFO-DIR-ENTRY
--* ddrescue: (ddrescue).         Data recovery tool
+-* Ddrescue: (ddrescue).         Data recovery tool
 +* ddrescue: (ddrescue).			Data recovery tool
  END-INFO-DIR-ENTRY
  
