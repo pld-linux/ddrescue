@@ -9,11 +9,12 @@ Source0:	http://download.savannah.gnu.org/releases/ddrescue/%{name}-%{version}.t
 # Source0-md5:	ed6b5b82d74cbd925db2b829350e74b1
 Patch0:		%{name}-info.patch
 URL:		http://www.nongnu.org/ddrescue/ddrescue.html
-BuildRequires:  info
+BuildRequires:	help2man
 BuildRequires:	libstdc++-devel
 BuildRequires:	lzip
 BuildRequires:	rpmbuild(macros) >= 1.167
 BuildRequires:	tar >= 1:1.22
+BuildRequires:	texinfo
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -69,8 +70,10 @@ będą odzyskiwane bardzo wydajnie.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install install-man \
+%{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+%{__rm} -f $RPM_BUILD_ROOT%{_infodir}/dir
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -87,6 +90,5 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/ddrescue
 %attr(755,root,root) %{_bindir}/ddrescuelog
 %{_infodir}/ddrescue.info*
-%{_infodir}/dir
 %{_mandir}/man1/ddrescue.1*
 %{_mandir}/man1/ddrescuelog.1*
