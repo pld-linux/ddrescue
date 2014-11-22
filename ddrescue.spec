@@ -9,6 +9,7 @@ Source0:	http://download.savannah.gnu.org/releases/ddrescue/%{name}-%{version}.t
 # Source0-md5:	ed6b5b82d74cbd925db2b829350e74b1
 Patch0:		%{name}-info.patch
 URL:		http://www.nongnu.org/ddrescue/ddrescue.html
+BuildRequires:  info
 BuildRequires:	libstdc++-devel
 BuildRequires:	lzip
 BuildRequires:	rpmbuild(macros) >= 1.167
