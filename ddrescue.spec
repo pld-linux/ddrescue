@@ -1,12 +1,12 @@
 Summary:	Data copying in presence of I/O errors
 Summary(pl.UTF-8):	Kopiowanie danych z błędami wejścia/wyjścia
 Name:		ddrescue
-Version:	1.18.1
+Version:	1.19
 Release:	1
 License:	GPL v3+
 Group:		Applications/System
 Source0:	http://download.savannah.gnu.org/releases/ddrescue/%{name}-%{version}.tar.lz
-# Source0-md5:	c3c745003a0da42ee8b96627af7a9de6
+# Source0-md5:	ed6b5b82d74cbd925db2b829350e74b1
 Patch0:		%{name}-info.patch
 URL:		http://www.nongnu.org/ddrescue/ddrescue.html
 BuildRequires:	libstdc++-devel
@@ -86,5 +86,6 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/ddrescue
 %attr(755,root,root) %{_bindir}/ddrescuelog
 %{_infodir}/ddrescue.info*
+%{_infodir}/dir
 %{_mandir}/man1/ddrescue.1*
 %{_mandir}/man1/ddrescuelog.1*
