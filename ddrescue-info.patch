@@ -1,14 +1,14 @@
---- ddrescue-1.5/doc/ddrescue.info.orig	2007-06-28 22:09:48.000000000 +0000
-+++ ddrescue-1.5/doc/ddrescue.info	2007-07-01 13:35:28.533868515 +0000
-@@ -1,9 +1,9 @@
- This is ddrescue.info, produced by makeinfo version 4.13 from
- ddrescue.texinfo.
+--- ddrescue-1.26/doc/ddrescue.texi.orig	2022-01-21 13:48:37.000000000 +0100
++++ ddrescue-1.26/doc/ddrescue.texi	2022-01-22 19:38:19.737032354 +0100
+@@ -9,9 +9,9 @@
+ @set UPDATED 21 January 2022
+ @set VERSION 1.26
  
--INFO-DIR-SECTION GNU Packages
-+INFO-DIR-SECTION File utilities:
- START-INFO-DIR-ENTRY
+-@dircategory GNU Packages
++@dircategory File utilities:
+ @direntry
 -* Ddrescue: (ddrescue).         Data recovery tool
 +* ddrescue: (ddrescue).			Data recovery tool
- END-INFO-DIR-ENTRY
+ @end direntry
  
- 
+ 

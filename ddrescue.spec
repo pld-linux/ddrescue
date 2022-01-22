@@ -57,6 +57,8 @@ będą odzyskiwane bardzo wydajnie.
 %setup -q
 %patch0 -p1
 
+%{__rm} doc/ddrescue.info*
+
 %build
 ./configure \
 	CXX="%{__cxx}" \
@@ -67,7 +69,7 @@ będą odzyskiwane bardzo wydajnie.
 	--infodir=%{_infodir} \
 	--mandir=%{_mandir}
 
-%{__make}
+%{__make} all info
 
 %install
 rm -rf $RPM_BUILD_ROOT
