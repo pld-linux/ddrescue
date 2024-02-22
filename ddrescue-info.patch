@@ -1,14 +1,14 @@
---- ddrescue-1.26/doc/ddrescue.texi.orig	2022-01-21 13:48:37.000000000 +0100
-+++ ddrescue-1.26/doc/ddrescue.texi	2022-01-22 19:38:19.737032354 +0100
+--- ddrescue-1.28/doc/ddrescue.texi.orig	2024-02-22 20:27:43.463199424 +0100
++++ ddrescue-1.28/doc/ddrescue.texi	2024-02-22 20:29:45.249206319 +0100
 @@ -9,9 +9,9 @@
- @set UPDATED 23 January 2023
- @set VERSION 1.27
+ @set UPDATED 22 January 2024
+ @set VERSION 1.28
  
 -@dircategory GNU Packages
 +@dircategory File utilities:
  @direntry
 -* Ddrescue: (ddrescue).         Data recovery tool
-+* ddrescue: (ddrescue).			Data recovery tool
++* Ddrescue: (ddrescue).			Data recovery tool
  @end direntry
  
  

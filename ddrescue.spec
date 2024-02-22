@@ -1,12 +1,12 @@
 Summary:	Data copying in presence of I/O errors
 Summary(pl.UTF-8):	Kopiowanie danych z błędami wejścia/wyjścia
 Name:		ddrescue
-Version:	1.27
+Version:	1.28
 Release:	1
 License:	GPL v3+
 Group:		Applications/System
 Source0:	http://download.savannah.gnu.org/releases/ddrescue/%{name}-%{version}.tar.lz
-# Source0-md5:	9617e8914ebc7a250379c6477a2cef27
+# Source0-md5:	0444167cc19dffb70fe1530ae1c35fa4
 Patch0:		%{name}-info.patch
 URL:		http://www.gnu.org/software/ddrescue/
 BuildRequires:	help2man
