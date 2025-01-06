@@ -1,8 +1,8 @@
 --- ddrescue-1.28/doc/ddrescue.texi.orig	2024-02-22 20:27:43.463199424 +0100
 +++ ddrescue-1.28/doc/ddrescue.texi	2024-02-22 20:29:45.249206319 +0100
 @@ -9,9 +9,9 @@
- @set UPDATED 22 January 2024
- @set VERSION 1.28
+ @set UPDATED 5 January 2025
+ @set VERSION 1.29
  
 -@dircategory GNU Packages
 +@dircategory File utilities:
